@@ -1,0 +1,163 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Main content layout */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+/* Left section styles */
+.left-section {
+    width: 60%;
+}
+
+/* Right section styles */
+.right-section {
+    width: 35%;
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents content overflow */
+}
+
+/* Input and history sections */
+.input-section,
+.history-section {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+select,
+button {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button:hover {
+    background-color: #ddd;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Expense history list */
+#expense-history {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px; /* Example maximum height */
+    overflow-y: auto; /* Adds a vertical scrollbar if content overflows */
+}
+
+#expense-history li {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#expense-history .delete-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #ff0000;
+    cursor: pointer;
+}
+
+/* Charts container */
+.charts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 300px; /* Example maximum height */
+    overflow-y: auto; /* Adds a vertical scrollbar if content overflows */
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* Pie chart styles */
+#pie-chart {
+    width: 80px;
+    height: 80px;
+}
+
+/* Line chart styles */
+#line-chart {
+    width: 100%;
+    height: 200px;
+}
+
+/* Toggleable sections for additional features */
+.toggle-section {
+    cursor: pointer;
+    color: #36a2eb;
+    margin: 1rem 0;
+}
+
+.toggle-section:hover {
+    text-decoration: underline;
+}
+
+/* Additional feature sections initially collapsed */
+.recurring-section,
+.budget-section,
+.filter-section {
+    height: 50px;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.recurring-section.show,
+.budget-section.show,
+.filter-section.show {
+    height: auto;
+}
+
+/* Budget status */
+#budget-status {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}

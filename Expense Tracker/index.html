@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>Expense Tracker</h1>
+  </nav>
+  <main class="main-content">
+    <section class="left-section">
+      <div class="input-section">
+        <h2>Log Expense</h2>
+        <form id="expense-form">
+          <input type="text" id="expense-name" placeholder="Expense Name" required>
+          <input type="number" id="expense-amount" placeholder="Amount" required>
+          <input type="datetime-local" id="expense-datetime" required>
+          <select id="expense-category" required>
+            <option value="food">Food</option>
+            <option value="clothing">Clothing</option>
+            <option value="stationary">Stationary</option>
+            <!-- Add more categories as needed -->
+          </select>
+          <button type="submit">Add Expense</button>
+        </form>
+      </div>
+      <div class="history-section">
+        <h2>Expense History</h2>
+        <ul id="expense-history">
+          <!-- Expense items will be appended here dynamically -->
+        </ul>
+      </div>
+    </section>
+    <section class="right-section">
+      <h2>Expense Overview</h2>
+      <div id="budget-status">Total Expenses: $0.00 / Monthly Budget: $0.00</div>
+      <div class="charts-container">
+        <canvas id="pie-chart"></canvas>
+        <canvas id="line-chart"></canvas>
+      </div>
+      <!-- <div class="toggle-section" data-target="recurring-section">Recurring Expenses</div> -->
+      <!--<div class="recurring-section">
+         <form id="recurring-form">
+          <input type="text" id="recurring-name" placeholder="Recurring Expense Name">
+          <input type="number" id="recurring-amount" placeholder="Amount">
+          <select id="recurring-category">
+            <option value="food">Food</option>
+            <option value="clothing">Clothing</option>
+            <option value="stationary">Stationary</option>
+            Add more categories as needed 
+          </select>
+          <button type="submit">Add Recurring Expense</button>
+        </form> -->
+      </div>
+      <div class="toggle-section" data-target="budget-section">Set Monthly Budget</div>
+      <div class="budget-section">
+        <form id="budget-form">
+          <input type="number" id="monthly-budget" placeholder="Monthly Budget">
+          <button type="submit">Set Budget</button>
+        </form>
+      </div>
+      <!-- <div class="toggle-section" data-target="filter-section">Filter Expenses</div>
+      <div class="filter-section">
+        <form id="filter-form">
+          <input type="date" id="filter-start-date" placeholder="Start Date">
+          <input type="date" id="filter-end-date" placeholder="End Date">
+          <select id="filter-category">
+            <option value="">All Categories</option>
+            <option value="food">Food</option>
+            <option value="clothing">Clothing</option>
+            <option value="stationary">Stationary</option> -->
+            <!-- Add more categories as needed -->
+          <!-- </select>
+          <button type="submit">Filter</button>
+        </form> -->
+      </div>
+    </section>
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
