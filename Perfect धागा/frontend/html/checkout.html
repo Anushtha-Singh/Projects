@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/2d1c7583b1.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+        body {
+            background: #CA136B;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {}
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        header div {
+            width: 100px;
+            height: 40px;
+            overflow: visible;
+        }
+        .shadow {
+            box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
+        }
+        #menu {
+            min-width: 50px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: #E22E8C;
+        }
+        #logo {
+            align-self: flex-end;
+        }
+        #logo img {
+            width: 100%;
+            height: auto;
+        }
+        #cart {
+            width: 150px;
+            min-width: 100px;
+            background: #E22E8C;
+            border-radius: 10px;
+            text-transform: uppercase;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+        }
+        .address-section, .checkout-section {
+            flex: 1;
+            background: #FBFBFB;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
+        }
+        label {
+            text-transform: uppercase;
+            font-size: 16px;
+            color: #336AC9;
+            font-weight: bold;
+        }
+        input {
+            color: #CA136B;
+            border: 1px solid rgb(226, 225, 232);
+            border-radius: 5px;
+            text-align: center;
+            padding: 5px 0 5px 12px;
+            width: calc(100% - 24px);
+            height: 35px;
+        }
+        #checkoutCard {
+            max-width: 400px;
+            background: #FBFBFB;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        #details {
+            padding: 10px;
+            background: linear-gradient(#FBFBFB 40%, #D5D2DD 100%);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        #details dl {
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 60px auto;
+            justify-items: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        #details dt {
+            color: #D5D2DD;
+            text-transform: uppercase;
+            font-size: 18px;
+            grid-row: 1;
+        }
+        #details dd {
+            color: #336AC9;
+            margin: 0;
+        }
+        #checkoutCard label {
+            display: block;
+            margin-top: 1em;
+        }
+        #bankLogos {
+            text-align: center;
+        }
+        #bankLogos img {
+            width: 50px;
+            height: auto;
+            margin: 0 5px;
+        }
+        #btnSubmit {
+            text-align: center;
+            width: 100%;
+            border: none;
+            height: 50px;
+            text-transform: uppercase;
+            border-radius: 10px;
+            background: #336AC9;
+            color: #FBFBFB;
+            font-size: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            color: #FBFBFB;
+        }
+        footer a {
+            color: #FBFBFB;
+            padding: 0 20px;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #336AC9;
+        }
+        @media screen and (max-width: 746px) {
+            .content {
+                flex-direction: column;
+            }
+            footer {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <header>
+            <div id="menu"><img src="https://thinsoldier.com/wip/nike-grid/images/icon-menu.svg" alt="Menu"></div>
+            <div id="logo"><img src="https://thinsoldier.com/wip/nike-grid/images/nike_logo.png" alt="Nike Logo"></div>
+            <div id="cart"><p>1 item <i class="fa fa-shopping-cart" aria-hidden="true"></i></p></div>
+        </header>
+        <section class="content">
+            <aside class="address-section shadow">
+                <h2>Shipping Address</h2>
+                <form id="addressForm">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" required>
+
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" required>
+
+                    <label for="city">City:</label>
+                    <input type="text" id="city" required>
+
+                    <label for="zip">ZIP Code:</label>
+                    <input type="text" id="zip" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" required>
+                </form>
+            </aside>
+            <article id="checkoutCard" class="checkout-section shadow">
+                <div id="details">
+                    <h1>Checkout</h1>
+                    <dl>
+                        <dt>Total:</dt>
+                        <dd>₹ 2500</dd>
+                        <dt>Shipping:</dt>
+                        <dd>₹ 150</dd>
+                        <dt>Taxes:</dt>
+                        <dd>₹ 50</dd>
+                        <dt>Order Total:</dt>
+                        <dd>₹ 2700</dd>
+                    </dl>
+                    <div id="bankLogos">
+                        <h2>Accepted Payment Methods</h2>
+                        <img src="path/to/bank_logo1.png" alt="Bank 1" class="bank-logo">
+                        <img src="path/to/bank_logo2.png" alt="Bank 2" class="bank-logo">
+                        <img src="path/to/bank_logo3.png" alt="Bank 3" class="bank-logo">
+                        <img src="path/to/bank_logo4.png" alt="Bank 4" class="bank-logo">
+                    </div>
+                    <label for="paymentMethod">Payment Method:</label>
+                    <select id="paymentMethod" name="paymentMethod" onchange="toggleCartDetails()">
+                        <option value="credit_card">Credit Card</option>
+                        <option value="debit_card">Debit Card</option>
+                        <option value="net_banking">Net Banking</option>
+                        <option value="cod">Cash on Delivery</option>
+                    </select>
+                </div>
+                <form id="paymentForm">
+                    <div id="creditCardDetails">
+                        <label for="cardNumberInput">Card Number:</label>
+                        <div id="cardNumber">
+                            <input type="text" id="cardNumberInput1" placeholder="1234" maxlength="4" required>
+                            <input type="text" id="cardNumberInput2" placeholder="5678" maxlength="4" required>
+                            <input type="text" id="cardNumberInput3" placeholder="9012" maxlength="4" required>
+                            <input type="text" id="cardNumberInput4" placeholder="3456" maxlength="4" required>
+                        </div>
+                        <div id="securityInfo">
+                            <label for="expiryDate">Expiry Date:</label>
+                            <input type="text" id="expiryDate" placeholder="MM/YY" required>
+                            <label for="securityCode">CVV:</label>
+                            <input type="text" id="securityCode" maxlength="3" required>
+                        </div>
+                    </div>
+                    <div id="btnContainer">
+                        <a href= "order_confirmation.html"  type="submit" id="btnSubmit">Place Order</a>
+                    </div>
+                </form>
+            </article>
+        </section>
+        <footer>
+            <p>© 2024 Nike, Inc.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+        </footer>
+    </section>
+</body>
+</html>
+
+    <script>
+        function toggleCartDetails() {
+            const paymentMethod = document.getElementById('paymentMethod').value;
+            const creditCardDetails = document.getElementById('creditCardDetails');
+
+            if (paymentMethod === 'cod') {
+                creditCardDetails.style.display = 'none'; // Hide card details
+            } else {
+                creditCardDetails.style.display = 'block'; // Show card details
+            }
+        }
+    </script>
+</body>
+</html>
